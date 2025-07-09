@@ -35,7 +35,7 @@ The following EXTRA features are implemented:
 
 Here's a video / GIF that demos all of the app's implemented features:
 
-[![Landlord Tip Simulator Demo](https://i.imgur.com/thumbnail-image-id.jpg)](https://imgur.com/a/101-project-4-NQnIaUD)
+<img src="https://i.imgur.com/XYZ123.gif" width="300" alt="Landlord Tip Simulator Demo">
 
 
 GIF created with XRecorder for Android
