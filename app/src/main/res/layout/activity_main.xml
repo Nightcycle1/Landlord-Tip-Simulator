@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:itemCount="4"
+    tools:listitem="@layout/item_fence"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="463dp"
+        android:layout_height="496dp"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.211"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/grass" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="481dp"
+        android:layout_height="396dp"
+
+        android:elevation="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/sky" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fenceRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clipChildren="false"
+        android:elevation="2dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.433" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="218dp"
+        android:layout_height="231dp"
+        android:translationZ="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.388"
+        app:srcCompat="@drawable/icons8_house" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="260dp"
+        android:layout_height="305dp"
+        android:scaleType="fitXY"
+        android:translationZ="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.692"
+        app:srcCompat="@drawable/icons8_man" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="321dp"
+        android:layout_height="136dp"
+        android:ems="10"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:maxLines="4"
+        android:scrollHorizontally="false"
+
+        android:background = "@null"
+
+
+        android:text="Due to the state of the economy, your landlord is now asking for you to tip him. What would you like to tip him?"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <EditText
+        android:id="@+id/rentInput"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:background="#80333333"
+        android:hint="Enter monthly rent ($)"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#AAAAAA"
+        android:translationZ="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:layout_width="411dp"
+        android:layout_height="160dp"
+        android:background="#80333333"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.632">
+
+        <!-- New: Tip Amount Display -->
+        <TextView
+            android:id="@+id/tipAmountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Tip amount: $0.00"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Slider -->
+        <SeekBar
+            android:id="@+id/tipSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="15"
+            android:progressDrawable="@drawable/custom_seekbar"
+            android:splitTrack="false"
+            android:thumb="@drawable/custom_thumb" />
+
+        <TextView
+            android:id="@+id/tipPercentageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="15%"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <!-- Reaction Text -->
+        <TextView
+            android:id="@+id/reactionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="I think we can do better."
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
